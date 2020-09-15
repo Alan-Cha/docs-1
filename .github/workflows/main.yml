@@ -36,14 +36,7 @@ jobs:
           git submodule update
           
       - name: Build static site
-        run: |
-          pwd
-          ls
-          echo
-          ls themes
-          echo
-          ls themes/hugo-theme-learn
-          hugo
+        run: hugo
           
       - name: Link checker
         # You may pin to the exact commit or the version.
@@ -51,4 +44,4 @@ jobs:
         uses: peter-evans/link-checker@v1.2.2
         with:
           # Liche arguments
-          args: --document-root public/
+          args: -v -r public/
