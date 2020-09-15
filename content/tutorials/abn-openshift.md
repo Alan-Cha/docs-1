@@ -18,7 +18,7 @@ You will learn:
 - how to specify a reward metric; and
 - how to execute an A/B/n experiment with iter8.
 
-The tutorial is based on the [Bookinfo sample application](https://istio.io/docs/examples/bookinfo/) distributed with [Istio](https://istio.io).
+The tutorial is based on the [Bookinfo sample application](https://istio.io/docs/examples/bookinfo/) distributed with [Istio](https://istioabc.io).
 This application comprises 4 microservies: *productpage*, *details*, *reviews*, and *ratings*.
 Of these, *productpage* is a user-facing service while the others are backend services.
 
