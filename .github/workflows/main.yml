@@ -23,7 +23,9 @@ jobs:
       - uses: actions/checkout@v2
           
       - name: Build static site
-        run: hugo
+        run: |
+          ls
+          hugo
           
       - name: Link checker
         # You may pin to the exact commit or the version.
