@@ -28,7 +28,7 @@ jobs:
       - name: Link checker
         # You may pin to the exact commit or the version.
         # uses: peter-evans/link-checker@41c97244bb50a4a1b273d60abf5b5862b09f0c2d
-        uses: O@v1.2.2
+        uses: peter-evans/link-checker@v1.2.2
         with:
           # Liche arguments
           args: --document-root public/
