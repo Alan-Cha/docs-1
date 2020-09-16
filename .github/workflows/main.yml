@@ -47,12 +47,12 @@ jobs:
           # Liche arguments
           args: -v -r public/ -d public/
 
-      - name: Create issue from failed links
-        uses: peter-evans/create-issue-from-file@v2
-        with:
-          title: Link checker report
-          content-filepath: ./link-checker/out.md
-          labels: report, automated issue
+      # - name: Create issue from failed links
+      #   uses: peter-evans/create-issue-from-file@v2
+      #   with:
+      #     title: Link checker report
+      #     content-filepath: ./link-checker/out.md
+      #     labels: report, automated issue
 
       - name: Fail if there were link errors
         run: exit ${{ steps.lc.outputs.exit_code }}
