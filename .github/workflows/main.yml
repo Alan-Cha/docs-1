@@ -39,9 +39,20 @@ jobs:
         run: hugo
           
       - name: Link checker
+        id: lc
         # You may pin to the exact commit or the version.
         # uses: peter-evans/link-checker@41c97244bb50a4a1b273d60abf5b5862b09f0c2d
         uses: peter-evans/link-checker@v1.2.2
         with:
           # Liche arguments
-          args: -v -r public/
+          args: -v -r public/ -d public/
+
+      - name: Create issue from failed links
+        uses: peter-evans/create-issue-from-file@v2
+        with:
+          title: Link checker report
+          content-filepath: ./link-checker/out.md
+          labels: report, automated issue
+
+      - name: Fail if there were link errors
+        run: exit ${{ steps.lc.outputs.exit_code }}
