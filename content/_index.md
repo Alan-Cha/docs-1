@@ -19,4 +19,6 @@ Use iter8's analytics-driven continuous experimentation for reliable and frequen
 
 ---
 
+[broken link](iter8.tools/asdfghjkl)
+
 [Explore iter8]({{< ref "concepts" >}})
